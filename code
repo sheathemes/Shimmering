@@ -68,28 +68,30 @@ CREDITS
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
 <!--Custom Options-->
-<meta name="color:background" content="#fbfbfb" />
-<meta name="color:accent" content="#83af9b" />
+<meta name="color:background" content="#fefefe" />
+<meta name="color:accent" content="#B9D7D9" />
 <meta name="color:accented text" content="#ffffff" />
 <meta name="color:Text" content="#888888" />    
-<meta name="color:bold" content="#000000"/>
+<meta name="color:bold" content="#bca297"/>
 <meta name="color:italic" content="#000000"/>
 <meta name="color:underline" content="#000000"/>
+<meta name="color:pre formated text" content="#000000"/>
+<meta name="color:pre formated background" content="#f8f8f8"/>
 <meta name="color:Links" content="#000000" />
-<meta name="color:Link Hover" content="#83af9b" />
+<meta name="color:Link Hover" content="#B9D7D9" />
 <meta name="color:text selection" content="#ffffff" />
-<meta name="color:text selection background" content="#83af9b" />
-<meta name="color:Blockquote" content="#83af9b" />
-<meta name="color:Scrollbar" content="#83af9b" />
+<meta name="color:text selection background" content="#B9D7D9" />
+<meta name="color:Blockquote" content="#B9D7D9" />
+<meta name="color:Scrollbar" content="#B9D7D9" />
 <meta name="color:Posts" content="#ffffff" />
-<meta name="color:main title" content="#ffffff" />
+<meta name="color:main title" content="#000000" />
 <meta name="color:Post Title" content="#B9D7D9" />
 <meta name="color:Post Borders" content="#f6f6f6" />
-<meta name="color:question" content="#ffffff" />
-<meta name="color:question background" content="#83af9b" />
+<meta name="color:question" content="#000000" />
+<meta name="color:question background" content="#fafafa" />
 <meta name="color:pagination" content="#888888" />
 <meta name="color:permalink" content="#000000" />
-<meta name="color:permalink hover" content="#83af9b" />
+<meta name="color:permalink hover" content="#B9D7D9" />
  
 <meta name="select:Background Attachment" content="fixed" title="fixed">
 <meta name="select:Background Attachment" content="scroll" title="scroll">
@@ -393,7 +395,8 @@ pre {
     font-family: inherit;
     font-weight: 400;
     line-height: 150%;
-    background-color:{color:post content background};
+    background-color:{color:pre formated background};
+	color: {color:pre formated text};
 }
  
 blockquote:not(.tumblr_parent) {
