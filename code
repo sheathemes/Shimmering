@@ -73,32 +73,31 @@ CREDITS
  
 <!--Custom Options-->
 <meta name="color:background" content="#f8f8f8" />
-<meta name="color:accent" content="#0f0f0f" />
-<meta name="color:accented text" content="#ffffff" />
+<meta name="color:accent" content="#ead7c8" />
+<meta name="color:accented text" content="#000000" />
 <meta name="color:Text" content="#888888" />    
-<meta name="color:bold" content="#c54730"/>
-<meta name="color:italic" content="#c54730"/>
-<meta name="color:underline" content="#c54730"/>
+<meta name="color:bold" content="#ead7c8"/>
+<meta name="color:italic" content="#ead7c8"/>
+<meta name="color:underline" content="#ead7c8"/>
 <meta name="color:Links" content="#000000" />
-<meta name="color:Link Hover" content="#a8a8a8" />
-<meta name="color:text selection" content="#ffffff" />
-<meta name="color:text selection background" content="#c54730" />
+<meta name="color:Link Hover" content="#9f9f9f" />
+<meta name="color:text selection" content="#000000" />
+<meta name="color:text selection background" content="#ead7c8" />
 <meta name="color:tooltip" content="#ffffff" />
-<meta name="color:tooltip background" content="#c54730" />
-<meta name="color:Blockquote" content="#c54730" />
-<meta name="color:sidebar title" content="#ffffff" />
+<meta name="color:tooltip background" content="#9a705f" />
+<meta name="color:Blockquote" content="#ead7c8" />
+<meta name="color:sidebar title" content="#000000" />
 <meta name="color:Posts" content="#ffffff" />
 <meta name="color:Post Title" content="#000000" />
-<meta name="color:Post Title Background" content="#0f0f0f" />
 <meta name="color:Post Borders" content="#f6f6f6" />
 <meta name="color:question" content="#000000" />
 <meta name="color:question background" content="#fafafa" />
-<meta name="color:chat odd" content="#00000"/>
-<meta name="color:chat even" content="#c54730"/>
+<meta name="color:chat odd" content="#5e5f59"/>
+<meta name="color:chat even" content="#9a705f"/>
 <meta name="color:pagination" content="#000000" />
-<meta name="color:permalink" content="#ffffff" />
-<meta name="color:permalink background" content="#0f0f0f" />
-<meta name="color:permalink hover" content="#cccccc" />
+<meta name="color:permalink" content="#000000" />
+<meta name="color:permalink background" content="#ead7c8" />
+<meta name="color:permalink hover" content="#9f9f9f" />
  
 <meta name="select:Background Attachment" content="fixed" title="fixed">
 <meta name="select:Background Attachment" content="scroll" title="scroll">
@@ -309,14 +308,14 @@ iframe.tmblr-iframe:hover {
 /*----------TOOLTIPS----------*/
  
 .tippy-tooltip.custom-theme {
-    background-color: {color:tooltip backgrouund};
+    background-color: {color:tooltip background};
     color: {color:tooltip};
     text-align:center;
     font-size: 12px;
 }
  
 .tippy-tooltip.custom-theme .tippy-svg-arrow {
-  fill: {color:tooltip backgrouund};
+  fill: {color:tooltip background};
 }
  
 /*----------TEXT SELECTION----------*/
@@ -466,8 +465,11 @@ a:hover{cursor:url("https://i.imgur.com/IepP2.jpg"), auto !important;}
     background:transparent;
 }
 
-.ti-angle-double-left, .ti-angle-double-right {
-    font-size: 10px;
+.feather-arrow-left, .feather-arrow-right {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
 }
  
 #pagination a {
@@ -691,8 +693,8 @@ figcaption p {
 }
  
 .reblog-header img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
@@ -715,21 +717,21 @@ figcaption p {
  
 .read_more {
     position: relative;
-    width: 100%;
+    left: calc(50% - 45px);
+    color: {color:links};
+    background-color: {color:accent};
+    color: {color:accented text};
+    padding: 5px 10px;
+    border-radius: 5px;
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
     -o-transition: all 0.9s ease;
     transition: all 0.9s ease;
-    position: relative;
-    left: calc(50% - 40px);
-    color: {color:links};
-    border-bottom: 2px solid {color:accent};
-    padding-bottom: 5px;
 }
  
 .read_more:hover {
-    color: {color:link hover};
-    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    color: {color:links};
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
     -o-transition: all 0.9s ease;
@@ -997,12 +999,22 @@ figcaption p {
  
 .posts .title, .posts .link {
     color: {color:post title};
-    background-color: {color:post title background};
-    padding: 10px 20px;
-    font-size: 2.0em;
-    font-weight: 700;
+    padding: 20px 20px 0;
+    font-size: 1.6em;
     line-height: 200%;
     text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+.posts .title:before, .posts .link:before {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: calc(50% - 45px);
+    width: 85px;
+    height: 2px;
+    background-color: {color:accent};
 }
  
 .posts .link a {
@@ -1014,11 +1026,7 @@ figcaption p {
 }
  
 .posts .link a:hover {
-    box-shadow: inset 0px -3px 0px 0px {color:post title};
-    -webkit-transition: 0.8s ease;
-    -moz-transition: 0.8s ease;
-    -o-transition: 0.8s ease;
-    transition: 0.8s ease;
+    color: {color:link hover};
 }
  
 /*----------TUMBLR QUOTES----------*/  
@@ -1092,7 +1100,6 @@ iframe.tumblr_audio_player {
     border-radius: 100%;
 }
  
- 
 #asker {
     text-transform: lowercase;
     color: {color:links};
@@ -1122,6 +1129,10 @@ iframe.tumblr_audio_player {
     font-weight: 700;
     text-align: capitalize;
     font-size: 1.1em;
+}
+
+.asker-link, .replier-link {
+    font-weight: 700;
 }
  
 #asker a:hover, #replier a:hover {
@@ -1352,10 +1363,8 @@ input:focus:-ms-input-placeholder { color: transparent;}
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
     border: 5px solid {color:accent};
+    margin-bottom: 10px;
 }
 
 #title {
@@ -1564,18 +1573,18 @@ input:focus:-ms-input-placeholder { color: transparent;}
         <nav id="pagination"> <!-----------PAGINATION----------->
             {block:Pagination}
             {block:PreviousPage}
-            <a href="{PreviousPage}">Previous</a>
+            <a href="{PreviousPage}"><i data-feather="arrow-left"></i></a></a>
             {/block:PreviousPage}
-            {block:JumpPagination length="5"}
+            {block:JumpPagination length="3"}
             {block:CurrentPage}
-            <a href="#" style="color:{color:pagination}; background-color:{color:accent};color:{color:accented text}; border:1px solid {color:accent};"><span class="current_page">{CurrentPage}</a></span></a>
+            <a href="#" style="color:{color:pagination}; background-color:{color:accent};color:{color:accented text};"><span class="current_page">{CurrentPage}</a></span></a>
             {/block:CurrentPage}
             {block:JumpPage}
             <a class="jump_page" href="{URL}">{PageNumber}</a>
             {/block:JumpPage}
             {/block:JumpPagination}
             {block:NextPage}
-            <a href="{NextPage}">Next</a>
+            <a href="{NextPage}"><i data-feather="arrow-right"></i></a>
             {/block:NextPage}
             {/block:Pagination}
         </nav> <!-----------PAGINATION----------->
@@ -1996,7 +2005,6 @@ $(document).ready(function(){
             content(reference) { 
                 const title = reference.getAttribute('title'); 
                 reference.removeAttribute('title'); return title; }, 
-            
         });
         feather.replace()
           // audio player fix by @ shudesigns
