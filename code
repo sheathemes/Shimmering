@@ -776,6 +776,10 @@ figcaption p {
     text-align: center;
     z-index: 1;
 }
+
+.controls {
+    height: 17px;
+}
  
 .controls a {
     position:relative;
