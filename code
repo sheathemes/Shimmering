@@ -1125,7 +1125,7 @@ iframe.tumblr_audio_player {
 }
  
 #asker a, #replier a {
-    color: {color:accent};
+    color: {color:bold};
     font-weight: 700;
     text-align: capitalize;
     font-size: 1.1em;
@@ -1136,7 +1136,7 @@ iframe.tumblr_audio_player {
 }
  
 #asker a:hover, #replier a:hover {
-    color: {color:links};
+    color: {color:link hover};
 }
  
 #replycont img {
